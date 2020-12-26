@@ -6,13 +6,10 @@ const _ = require("lodash");
 
 const app = express();
 
-mongoose.connect(
-  "mongodb+srv://admin-olivia:Abc1234@cluster0.cao1i.mongodb.net/todolistsDB",
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect("mongodb://localhost:27017/todolistsDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static("public"));
